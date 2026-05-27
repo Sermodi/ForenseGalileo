@@ -1,9 +1,10 @@
 """
-Genera un sistema.log extendido (~100 líneas) para el ejercicio 5.2
-Uso: python3 generar_log.py > evidencias_usb/logs/sistema.log
+Genera un sistema.log extendido (~100 lineas) para el ejercicio 5.2
+Uso: python generar_log.py evidencias_usb/logs/sistema.log
 """
 
 import random
+import sys
 from datetime import datetime, timedelta
 
 BASE = datetime(2024, 3, 15, 6, 0, 0)
@@ -66,22 +67,30 @@ for _ in range(100):
         f      = random.choice(ARCHIVOS),
         usb    = random.choice(USB_DEVICES),
     )
-    linea = f"{t.strftime('%Y-%m-%d %H:%M:%S')} {nivel:<5} [{modulo:<6}] {msg}"
+    linea = f"{t.strftime('%Y-%m-%d %H:%M:%S')} {nivel:<5} [{modulo}] {msg}"
     lineas.append(linea)
 
 # Insertar los 8 eventos originales en posiciones fijas para que el ejercicio funcione igual
 originales = [
-    "2024-03-15 08:12:33 INFO  [auth]   Usuario admin ha iniciado sesión desde 192.168.1.101",
+    "2024-03-15 08:12:33 INFO  [auth]   Usuario admin ha iniciado sesion desde 192.168.1.101",
     "2024-03-15 08:15:44 INFO  [file]   Archivo /docs/contrato.docx abierto por admin",
-    "2024-03-15 08:17:01 WARN  [net]    Conexión saliente a 185.220.101.45:443",
+    "2024-03-15 08:17:01 WARN  [net]    Conexion saliente a 185.220.101.45:443",
     "2024-03-15 08:17:05 ERROR [system] Fallo de acceso a /etc/shadow por usuario admin",
     "2024-03-15 08:22:18 INFO  [file]   Archivo /docs/contrato.docx copiado a /tmp/c.docx",
     "2024-03-15 08:25:50 WARN  [usb]    Dispositivo USB conectado: Vendor=0930 Product=6545",
     "2024-03-15 08:26:03 INFO  [file]   Archivo /tmp/c.docx copiado a /media/usb/c.docx",
-    "2024-03-15 08:28:11 INFO  [auth]   Usuario admin ha cerrado sesión",
+    "2024-03-15 08:28:11 INFO  [auth]   Usuario admin ha cerrado sesion",
 ]
 for i, orig in enumerate(originales):
     lineas.insert(10 + i * 10, orig)
 
-for l in lineas:
-    print(l)
+# Escribir a fichero (UTF-8 sin BOM) o por pantalla
+destino = sys.argv[1] if len(sys.argv) > 1 else None
+if destino:
+    with open(destino, "w", encoding="utf-8") as f:
+        for l in lineas:
+            f.write(l + "\n")
+    print(f"[+] Log generado en: {destino} ({len(lineas)} lineas)")
+else:
+    for l in lineas:
+        print(l)

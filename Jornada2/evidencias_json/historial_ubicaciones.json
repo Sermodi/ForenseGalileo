@@ -1,0 +1,44 @@
+[
+  {
+    "timestamp": "2026-03-14T20:00:00Z",
+    "lat": 40.4168,
+    "lon": -3.7038,
+    "precision_m": 15,
+    "dispositivo": "iPhone14-jperez"
+  },
+  {
+    "timestamp": "2026-03-15T08:10:00Z",
+    "lat": 40.4534,
+    "lon": -3.689,
+    "precision_m": 10,
+    "dispositivo": "iPhone14-jperez"
+  },
+  {
+    "timestamp": "2026-03-15T08:23:00Z",
+    "lat": 40.4534,
+    "lon": -3.689,
+    "precision_m": 8,
+    "dispositivo": "iPhone14-jperez"
+  },
+  {
+    "timestamp": "2026-03-15T09:45:00Z",
+    "lat": 40.4534,
+    "lon": -3.689,
+    "precision_m": 12,
+    "dispositivo": "iPhone14-jperez"
+  },
+  {
+    "timestamp": "2026-03-15T13:00:00Z",
+    "lat": 40.4168,
+    "lon": -3.7038,
+    "precision_m": 20,
+    "dispositivo": "iPhone14-jperez"
+  },
+  {
+    "timestamp": "2026-03-16T08:05:00Z",
+    "lat": 40.4534,
+    "lon": -3.689,
+    "precision_m": 9,
+    "dispositivo": "iPhone14-jperez"
+  }
+]

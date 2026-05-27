@@ -1,0 +1,85 @@
+[
+  {
+    "timestamp": "2026-03-15T08:23:11Z",
+    "usuario": "jperez",
+    "accion": "LOGIN",
+    "ip": "192.168.1.45",
+    "app": "Correo"
+  },
+  {
+    "timestamp": "2026-03-15T08:25:00Z",
+    "usuario": "jperez",
+    "accion": "DESCARGA",
+    "ip": "192.168.1.45",
+    "app": "Correo",
+    "archivo": "nominas_2026.xlsx"
+  },
+  {
+    "timestamp": "2026-03-15T08:26:30Z",
+    "usuario": "jperez",
+    "accion": "DESCARGA",
+    "ip": "192.168.1.45",
+    "app": "Correo",
+    "archivo": "clientes_db_export.csv"
+  },
+  {
+    "timestamp": "2026-03-15T08:27:45Z",
+    "usuario": "jperez",
+    "accion": "SUBIDA",
+    "ip": "192.168.1.45",
+    "app": "Drive",
+    "archivo": "clientes_db_export.csv",
+    "destino": "externo"
+  },
+  {
+    "timestamp": "2026-03-15T02:14:00Z",
+    "usuario": "admin",
+    "accion": "LOGIN",
+    "ip": "185.220.101.45",
+    "app": "Panel"
+  },
+  {
+    "timestamp": "2026-03-15T02:15:22Z",
+    "usuario": "admin",
+    "accion": "MODIFICACION",
+    "ip": "185.220.101.45",
+    "app": "Panel",
+    "objeto": "permisos_usuarios"
+  },
+  {
+    "timestamp": "2026-03-15T02:16:00Z",
+    "usuario": "admin",
+    "accion": "LOGOUT",
+    "ip": "185.220.101.45",
+    "app": "Panel"
+  },
+  {
+    "timestamp": "2026-03-15T09:00:00Z",
+    "usuario": "mgarcia",
+    "accion": "LOGIN",
+    "ip": "192.168.1.67",
+    "app": "Correo"
+  },
+  {
+    "timestamp": "2026-03-15T09:05:00Z",
+    "usuario": "mgarcia",
+    "accion": "LOGOUT",
+    "ip": "192.168.1.67",
+    "app": "Correo"
+  },
+  {
+    "timestamp": "2026-03-16T08:30:00Z",
+    "usuario": "jperez",
+    "accion": "LOGIN",
+    "ip": "10.0.0.22",
+    "app": "VPN"
+  },
+  {
+    "timestamp": "2026-03-16T08:32:00Z",
+    "usuario": "jperez",
+    "accion": "DESCARGA",
+    "ip": "10.0.0.22",
+    "app": "FileServer",
+    "archivo": "proyectos_secretos.zip"
+  }
+]
